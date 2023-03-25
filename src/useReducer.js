@@ -8,9 +8,6 @@ const initalState = {
 	confirmed: false,
 };
 
-// const reduer = {state, action} => {
-
-// };
 
 
 const reducerIf = (state, action) => {

@@ -1,4 +1,5 @@
 import React from 'react'
+import './App.css'
 
 
 const SECURITY_CODE = 'paradigma'
@@ -76,12 +77,12 @@ function UseState({ name }) {
 
   if (!state.deleted && !state.confirmed) {
     return (
-      <div>
-        <h2>Eliminar {name}</h2>
+      <div className='useState'>
+        <h2>{name}</h2>
         <p>Por favor, escribe el codigo de seguridad.</p>
         {
           (state.error && !state.loading) && (
-            <p>Error: el codigo es incorrecto</p>
+            <p className='text-error'>Error: el codigo es incorrecto ❌</p>
           )
         }
         {
@@ -103,22 +104,26 @@ function UseState({ name }) {
   } else if (!!state.confirmed && !state.deleted) {
     return (
       <React.Fragment>
-        <p>Pedimos Confirmación ¿Seguro?</p>
-        <button onClick={() => {
-          onDelete();
-        }}>Si, Eliminar</button>
-        <button onClick={() => {
-          onReset();
-        }}>No</button>
+        <div className='useState'>
+          <p>Pedimos Confirmación ¿Seguro?</p>
+          <button onClick={() => {
+            onDelete();
+          }}>Si, Eliminar</button>
+          <button onClick={() => {
+            onReset();
+          }}>No</button>
+        </div>
       </React.Fragment>
     );
   } else {
     return (
       <React.Fragment>
-        <p>Eliminada con exito</p>
-        <button onClick={() => {
-          onReset();
-        }}>Listo</button>
+        <div className='useState'>
+          <p>Eliminada con exito</p>
+          <button onClick={() => {
+            onReset();
+          }}>Listo ✔️</button>
+        </div>
       </React.Fragment>
     );
   }

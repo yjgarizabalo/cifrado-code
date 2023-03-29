@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cifrado-code/static/css/main.d7ff6931.css",
+    "main.js": "/cifrado-code/static/js/main.f064beff.js",
+    "index.html": "/cifrado-code/index.html",
+    "main.d7ff6931.css.map": "/cifrado-code/static/css/main.d7ff6931.css.map",
+    "main.f064beff.js.map": "/cifrado-code/static/js/main.f064beff.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d7ff6931.css",
+    "static/js/main.f064beff.js"
+  ]
+}
